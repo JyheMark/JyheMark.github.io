@@ -5,183 +5,227 @@ $highlight-font-color: #ced6dd;
 $background-color: #0c0f11;
 $large-screen-min-width: 580px;
 
-*{
-    box-sizing: border-box;
-    color: $font-color;
+* {
+  box-sizing: border-box;
+  color: $font-color;
 }
 
-body{
-    font-family: $font-stack;
-    font-size: 14px;
-    background-color: $background-color;
-    padding: 30px 0;
-    min-width: 300px;
+body {
+  font-family: $font-stack;
+  font-size: 14px;
+  background-color: $background-color;
+  padding: 30px 0;
+  min-width: 300px;
 }
 
-h1, .sub-heading{
-    font-family: $font-stack-heading;
+h1,
+.sub-heading {
+  font-family: $font-stack-heading;
 }
 
-header{
-    display:flex;
+a {
+  text-decoration: none;
 
-    @media screen and (min-width: $large-screen-min-width){
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 100px;
-    }
-
-    @media screen and (max-width: $large-screen-min-width){
-        flex-direction: column;
-        justify-content: flex-start;
-        text-align: center;
-        margin-bottom: 30px;
-
-        > div{
-            margin-bottom: 5px;
-        }
-    }
-
-    a{
-        text-decoration: none;
-
-        &:hover{
-            h1{
-                transition: all 200ms;
-                color: $font-color;
-            }
-        }
-    }
-
-    h1{
-        letter-spacing: 6px;
-        font-size: 20px;
-        margin: 0;
-    }
-
-    .fa-map-pin{
-        margin-right: 10px;
-    }
+  &:visited {
+    color: $highlight-font-color;
+  }
 }
 
-.container{
-    max-width: 800px;
-    height: 100%;
+header {
+  display: flex;
+
+  @media screen and (min-width: $large-screen-min-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+
+  @media screen and (max-width: $large-screen-min-width) {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    margin-bottom: 30px;
+
+    > div {
+      margin-bottom: 5px;
+    }
+  }
+
+  a {
+    &:hover {
+      h1 {
+        transition: all 200ms;
+        color: $font-color;
+      }
+    }
+  }
+
+  h1 {
+    letter-spacing: 6px;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .fa-map-pin {
+    margin-right: 10px;
+  }
+}
+
+.container {
+  max-width: 800px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 25px 15px 25px;
+}
+
+.highlight-text {
+  color: $highlight-font-color;
+}
+
+.sub-heading {
+  font-size: 18px;
+  width: 100%;
+  display: block;
+  letter-spacing: 6px;
+  margin-bottom: 25px;
+}
+
+.hero {
+  display: flex;
+  margin-bottom: 70px;
+  line-height: 1.5em;
+
+  @media screen and (min-width: $large-screen-min-width) {
+    justify-content: flex-start;
+    flex-direction: row;
+
+    img {
+      margin-right: 70px;
+    }
+  }
+
+  @media screen and (max-width: $large-screen-min-width) {
+    flex-direction: column;
+    text-align: center;
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    width: 142px;
+    height: 142px;
+  }
+
+  div:first-of-type {
+    p {
+      margin: 0 0 10px 0;
+      max-width: 60ch;
+    }
+  }
+
+  .btn-primary {
+    margin-top: 1.5rem;
+  }
+
+  .links-container {
+    margin-top: 1.5rem;
+  }
+}
+
+.links-container {
+  width: 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media screen and (max-width: $large-screen-min-width) {
     margin-left: auto;
     margin-right: auto;
-    padding: 15px 25px 15px 25px;
+  }
+
+  a {
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      path {
+        transition: all 200ms;
+        color: $highlight-font-color;
+      }
+    }
+  }
+
+  .cv-icon {
+    font-weight: bold;
+    font-size: 24px;
+  }
 }
 
-.highlight-text{
-    color: $highlight-font-color;
+.social-icon {
+  width: 30px;
+  height: 30px;
 }
 
-.sub-heading{
-    font-size: 18px;
+.btn-primary {
+  display: inline-block;
+  background-color: $background-color;
+  border-color: $font-color;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+  transition: all 200ms;
+
+  &:hover {
+    background-color: $font-color;
+    color: $background-color;
+  }
+}
+
+.post-feed {
+}
+
+.post-excerpt {
+  width: 100%;
+  border-top: solid;
+  border-width: 1px;
+  padding-top: 10px;
+
+  &:first-of-type {
+    border-style: none;
+    padding-top: 0px;
+  }
+
+  .post-excerpt-header {
     width: 100%;
-    display: block;
-    letter-spacing: 6px;
-    margin-bottom: 25px;
-}
-
-.hero{
     display: flex;
-    margin-bottom: 70px;
-    line-height: 1.5em;
-
-    @media screen and (min-width: $large-screen-min-width){
-        justify-content: flex-start;
-        flex-direction: row;
-
-        img{
-            margin-right: 70px;
-        }
-    }
-
-    @media screen and (max-width: $large-screen-min-width) {
-        flex-direction: column;
-        text-align: center;
-
-        img{
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 25px;
-        }
-    }
-
-    img{
-        border-radius: 50%;
-        width: 142px;
-        height: 142px;
-    }
-
-    div:first-of-type{
-        p{
-            margin: 0 0 10px 0;
-            max-width: 60ch;
-        }
-    }
-
-    .btn-primary{
-        margin-top: 1.5rem;
-    }
-
-    .links-container{
-        margin-top: 1.5rem;
-    }
-}
-
-.links-container{
-    width: 140px;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
 
     @media screen and (max-width: $large-screen-min-width) {
-        margin-left: auto;
-        margin-right: auto;
+      flex-direction: column;
     }
 
-    a{
-        width: 30px;
-        height: 30px;
-
-        &:hover{
-            path{
-                transition: all 200ms;
-                color: $highlight-font-color;
-            }
+    a {
+      &:hover {
+        span {
+          color: $font-color;
+          transition: all 200ms;
         }
+      }
     }
-
-    .cv-icon{
-        font-weight: bold;
-        font-size: 24px;
-    }
+  }
 }
 
-.social-icon{
-    width: 30px;
-    height: 30px;
-}
-
-.btn-primary{
-    display: inline-block;
-    background-color: $background-color;
-    border-color: $font-color;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 4px;
-    text-decoration: none;
-    padding: 5px 10px 5px 10px;
-    transition: all 200ms;
-
-    &:hover{
-        background-color: $font-color;
-        color: $background-color;
-    }
-}
-
-.post-feed{
-
+.post {
+  h2 {
+    font-weight: normal;
+    color: $highlight-font-color;
+    font-family: $font-stack-heading;
+  }
 }

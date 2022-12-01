@@ -11,8 +11,16 @@ body {
   min-width: 300px;
 }
 
-h1, .sub-heading {
+h1,
+.sub-heading {
   font-family: Poppins, arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #ced6dd;
 }
 
 header {
@@ -35,9 +43,6 @@ header {
   header > div {
     margin-bottom: 5px;
   }
-}
-header a {
-  text-decoration: none;
 }
 header a:hover h1 {
   transition: all 200ms;
@@ -150,13 +155,43 @@ header .fa-map-pin {
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
-  text-decoration: none;
   padding: 5px 10px 5px 10px;
   transition: all 200ms;
 }
 .btn-primary:hover {
   background-color: #a8adb2;
   color: #0c0f11;
+}
+
+.post-excerpt {
+  width: 100%;
+  border-top: solid;
+  border-width: 1px;
+  padding-top: 10px;
+}
+.post-excerpt:first-of-type {
+  border-style: none;
+  padding-top: 0px;
+}
+.post-excerpt .post-excerpt-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 580px) {
+  .post-excerpt .post-excerpt-header {
+    flex-direction: column;
+  }
+}
+.post-excerpt .post-excerpt-header a:hover span {
+  color: #a8adb2;
+  transition: all 200ms;
+}
+
+.post h2 {
+  font-weight: normal;
+  color: #ced6dd;
+  font-family: Poppins, arial, sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */
