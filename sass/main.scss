@@ -22,6 +22,14 @@ h1, .sub-heading{
     font-family: $font-stack-heading;
 }
 
+a{
+    text-decoration: none;
+
+    &:visited{
+        color: $highlight-font-color;
+    }
+}
+
 header{
     display:flex;
 
@@ -43,8 +51,6 @@ header{
     }
 
     a{
-        text-decoration: none;
-
         &:hover{
             h1{
                 transition: all 200ms;
@@ -172,7 +178,6 @@ header{
     border-width: 1px;
     border-style: solid;
     border-radius: 4px;
-    text-decoration: none;
     padding: 5px 10px 5px 10px;
     transition: all 200ms;
 
@@ -184,4 +189,37 @@ header{
 
 .post-feed{
 
+}
+
+.post-excerpt{
+    width: 100%;
+    border-top: solid;
+    border-width: 1px;
+    padding-top: 10px;
+
+    &:first-of-type{
+        border-style: none;
+        padding-top: 0px;
+    }
+
+    .post-excerpt-header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        a{            
+            &:hover{
+                span{
+                    color: $font-color;
+                    transition: all 200ms;
+                }
+            }
+        }
+    }
+}
+
+.post{
+    h2{
+        font-weight: normal;
+    }
 }
